@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='paystyle.css') }}">
+</head>
+<body>
+    <section class="payment-details">
+        <h1>Payment Details</h1>
+        <!-- Add your payment form or content here -->
+        <form action="payment" method="POST">
+            <!-- Payment form fields go here -->
+            <div class="inputBox">
+                <input type="text" name="card_number" placeholder="Card Number">
+                <input type="text" name="card_holder" placeholder="Card Holder Name">
+            </div>
+            <div class="inputBox">
+                <input type="text" name="expiration_date" placeholder="Expiration Date">
+                <input type="text" name="cvv" placeholder="CVV">
+            </div>
+            <input type="submit" class="btn" value="Submit Payment">
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <section class="footer">
+        Created by <a href="#">Hritik Ranjan Sharma</a> | All rights reserved.
+    </section>
+</body>
+</html>
