@@ -45,7 +45,9 @@
 
 <h1>it's never too easy but <br> you have to try</h1>
 
-<a href="#register"><button class="btn">get started</button></a>
+<a href="{{ url_for('freesession') }}"><button class="btn">Book a Free Session</button></a>
+
+
 
 </section>
 
@@ -273,30 +275,26 @@
 <!-- plan section ends -->
 
 <!-- register section starts  -->
-
 <section class="register" id="register">
-
-<h1 class="heading">register now</h1>
-
-<form action="/register" method="POST">
-    <!-- Your form fields go here -->
-    <div class="inputBox">
-        <input type="text" name="first_name" placeholder="first name">
-        <input type="text" name="last_name" placeholder="last name">
-    </div>
-
-    <div class="inputBox">
-        <input type="email" name="email" placeholder="your email">
-        <input type="number" name="phone_number" placeholder="your number">
-    </div>
-
-    <textarea name="message" cols="30" rows="10" placeholder="message"></textarea>
-
-    <input type="submit" class="btn" value="register">
-</form>
-
+    <h1 class="heading">Register Now</h1>
+    <form action="/register" method="POST">
+        <!-- Your form fields go here -->
+        <div class="inputBox">
+            <input type="text" name="first_name" placeholder="First Name">
+            <input type="text" name="last_name" placeholder="Last Name">
+        </div>
+        <div class="inputBox">
+            <input type="email" name="email" placeholder="Your Email">
+            <input type="number" name="phone_number" placeholder="Your Number">
+        </div>
+        <div class="inputBox">
+            <input type="date" name="session_date" placeholder="Session Date">
+            <!-- You can set min and max attributes for date input to limit available dates -->
+        </div>
+        <textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
+        <input type="submit" class="btn" value="Register">
+    </form>
 </section>
-
 <!-- register section ends -->
 
 <!-- footer section starts  -->

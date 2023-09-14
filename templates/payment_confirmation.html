@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='payconfirstyle.css') }}">
     <title>Payment Confirmation</title>
 </head>
 <body>
     <section class="payment-confirmation">
         <h1>Payment Confirmation</h1>
         <p>Thank you for your payment!</p>
+        <hr>
         <p>Card Number: {{ card_number }}</p>
         <p>Card Holder: {{ card_holder }}</p>
         <p>Expiration Date: {{ expiration_date }}</p>
         <p>CVV: {{ cvv }}</p>
+   
+        <!-- Add a button to go back to the home page -->
+        <a href="{{ url_for('index') }}"><button class="btn">Back to Home</button></a>
     </section>
 
     <!-- Footer Section -->

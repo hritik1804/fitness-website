@@ -1,56 +1,64 @@
-/* Apply styles to the body */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+/* Reset some default styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Style the payment details container */
+/* Apply a background color to the body */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the payment details section */
 .payment-details {
     background-color: #fff;
-    margin: 150px 500px 15px 500px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 20px auto;
     padding: 20px;
+    width: 80%;
     max-width: 400px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .payment-details h1 {
     font-size: 24px;
     margin-bottom: 20px;
-    text-align: center;
 }
 
-/* Style the form and its input fields */
-form {
-    display: flex;
-    flex-direction: column;
-}
-
+/* Style the input boxes */
 .inputBox {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-.inputBox input[type="text"] {
+.inputBox input[type="text"],
+.inputBox input[type="date"] {
+    width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.inputBox input[type="text"]:focus,
+.inputBox input[type="date"]:focus {
+    outline: none;
+    border-color: #007BFF;
 }
 
 /* Style the submit button */
 .btn {
     background-color: #007BFF;
     color: #fff;
-    padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
+    padding: 10px 20px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
@@ -59,10 +67,10 @@ form {
 
 /* Style the footer section */
 .footer {
+    margin-top: 20px;
     text-align: center;
-    margin-top: 2px;
-    color: #555;
     font-size: 14px;
+    color: #777;
 }
 
 .footer a {
