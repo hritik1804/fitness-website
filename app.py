@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, g
+from flask_frozen import Freezer
 import sqlite3
 
 app = Flask(__name__, static_folder='static')
@@ -215,3 +216,16 @@ if __name__ == '__main__':
     init_registration_db()  # Initialize the registration database
     init_session_db()      # Initialize the session booking database
     app.run(debug=True)
+    
+    
+    
+app = Flask(__name__)
+freezer = Freezer(app)
+
+@app.route('/')
+def index():
+    # Your Flask view logic
+    return render_template('index.html')
+
+if __name__ == '__main__':
+    freezer.freeze()
