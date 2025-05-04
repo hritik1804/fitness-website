@@ -214,4 +214,4 @@ def insert_session_data(name, address, age, weight, gender, session_date):
 if __name__ == '__main__':
     init_registration_db()  # Initialize the registration database
     init_session_db()      # Initialize the session booking database
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
